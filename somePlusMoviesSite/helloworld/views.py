@@ -21,9 +21,12 @@ def ret_ans(actor):
     if actor=='d':
         voc = 'ドゥニ・ヴィルヌーヴ'
         model = word2vec.Word2Vec.load('/home/runa/git/moviesWord2vec/somePlusMoviesSite/helloworld/denis.model')
-    else:
-        voc = ''
-        model = 'some'
+    elif actor=='e':
+        voc = 'エマ・ワトソン'
+        model = word2vec.Word2Vec.load('/home/runa/git/moviesWord2vec/somePlusMoviesSite/helloworld/emma.model')
+    elif actor=='s':
+        voc = 'ステイサム'
+        model = word2vec.Word2Vec.load('/home/runa/git/moviesWord2vec/somePlusMoviesSite/helloworld/statham.model')
 
     out = model.most_similar(positive=[voc, '映画'], topn = 10)
     return out
