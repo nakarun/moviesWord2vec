@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+ 
+{% block body %}
+<p>This is {{app}} test.</p>
+
+<form method="post" action=".">
+<select>
+  <option value="d">ドゥニ・ヴィルヌーヴ</option>
+  <option value="e">エマ・ワトソン</option>
+  <option value="s">ステイサム</option>
+</select>
+
+
+<p><input type="submit" value="送信する"></p>
+</form>
+
+{% if is_weekday %}
+<p>Today is weekday.</p>
+{% else %}
+<p>Today is holiday.</p>
+{% endif %}
+{% endblock %}

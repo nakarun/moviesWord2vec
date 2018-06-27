@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form }}
+      <p> + 映画 </p>
+      <input type="submit" value="="/>
+    </form>
+  {% if choice %}
+    {% for item in choice %}
+        {{ item.0 }}<br>
+    {% endfor %}
+  {%  endif %}
+  </body>
+</html>
